@@ -9,7 +9,7 @@
 
 <div class="hover-effect" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin: 10px 0;">
 
-- <span class="pulse">🎓</span> Pursuing <b>Computer Science</b> at UNAM (2021-present)  
+- <span class="pulse">🎓</span> <b>Computer Science</b> at UNAM  
 
 - <span class="pulse">📊</span> Certified <b>Junior Data Scientist</b>  
 
