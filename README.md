@@ -11,7 +11,7 @@
 
 - <span class="pulse">🎓</span> <b>Computer Science</b> at UNAM  
 
-- <span class="pulse">📊</span> Certified <b>Junior Data Scientist</b>  
+- <span class="pulse">📊</span> Certified <b> Data Scientist</b>  
 
 - <span class="pulse">👩‍🏫</span> Former as a Math/Physics/Programation professor  
 
