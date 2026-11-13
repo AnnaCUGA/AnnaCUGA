@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 270" role="img" aria-labelledby="t">
-  <title id="t">Sleep disorder analysis. Study of 374 patients and a Random Forest screening model. 90% F1-score.</title>
+  <title id="t">Sleep disorder analysis. Study of 374 patients and a Random Forest screening model. 89% accuracy.</title>
   <defs><pattern id="p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#aaa3cd" opacity="0.16"/></pattern>
     <style>
       .ti { font: 700 24px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #edeafb; }
@@ -26,7 +26,7 @@
   <text class="ti" x="32" y="54">Sleep disorder analysis</text>
   <text class="de" x="32" y="96">374 patients: what goes with insomnia</text><text class="de" x="32" y="120">and apnea, plus a screening model.</text>
   <rect x="32" y="218" width="66" height="26" rx="13" fill="none" stroke="#373063"/><text class="tg" x="65.0" y="235.5" text-anchor="middle">pandas</text><rect x="106" y="218" width="66" height="26" rx="13" fill="none" stroke="#373063"/><text class="tg" x="139.0" y="235.5" text-anchor="middle">Plotly</text><rect x="180" y="218" width="118" height="26" rx="13" fill="none" stroke="#373063"/><text class="tg" x="239.0" y="235.5" text-anchor="middle">Random Forest</text>
-  <text class="me" x="32" y="196">90%</text>
-  <text class="ml" x="130" y="194">F1-score</text>
-  <text class="ax" x="400" y="108">Precision</text><rect x="466" y="96" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.2s" x="466" y="96" width="92" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="92" text-anchor="end">92%</text><text class="ax" x="400" y="140">Recall</text><rect x="466" y="128" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.45s" x="466" y="128" width="89" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="124" text-anchor="end">89%</text><text class="ax" x="400" y="172">F1</text><rect x="466" y="160" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.7s" x="466" y="160" width="90" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="156" text-anchor="end">90%</text>
+  <text class="me" x="32" y="196">89%</text>
+  <text class="ml" x="130" y="194">accuracy</text>
+  <text class="ax" x="400" y="108">Precision</text><rect x="466" y="96" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.2s" x="466" y="96" width="90" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="92" text-anchor="end">90%</text><text class="ax" x="400" y="140">Recall</text><rect x="466" y="128" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.45s" x="466" y="128" width="89" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="124" text-anchor="end">89%</text><text class="ax" x="400" y="172">F1</text><rect x="466" y="160" width="100" height="16" rx="8" fill="#15122a"/><rect class="hbar" style="animation-delay:0.7s" x="466" y="160" width="89" height="16" rx="8" fill="#7fe0c9"/><text class="ax" x="566" y="156" text-anchor="end">89%</text>
 </svg>

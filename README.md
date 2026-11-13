@@ -42,7 +42,7 @@ I'm a **Data and Artificial Intelligence Analyst at Fundación Televisa** and a 
   <a href="https://github.com/AnnaCUGA/PrediccionDiabetes_2024-2025"><img src="assets/proyecto-diabetes.svg" alt="Diabetes forecast for Mexico: time-series forecast of cases by state with ARIMA and Prophet, on 24 years of data." width="49.5%"></a>
 </p>
 <p>
-  <a href="https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o"><img src="assets/proyecto-sueno.svg" alt="Sleep disorder analysis: study of 374 patients and a Random Forest screening model. 90% F1-score." width="49.5%"></a>
+  <a href="https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o"><img src="assets/proyecto-sueno.svg" alt="Sleep disorder analysis: study of 374 patients and a Random Forest screening model. 89% accuracy." width="49.5%"></a>
   <a href="https://github.com/AnnaCUGA/Brain-Xray-Alzheimer-Detection"><img src="assets/proyecto-alzheimer.svg" alt="Alzheimer's detection: image classification on brain scans across 4 severity classes." width="49.5%"></a>
 </p>
 
