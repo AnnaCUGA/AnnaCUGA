@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" role="img" aria-labelledby="t">
+  <title id="t">Let's build something together</title>
+  <defs><clipPath id="m"><rect width="1200" height="150" rx="16"/></clipPath>
+    <style>.h { font: 800 34px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #edeafb; letter-spacing: -0.5px; } .p { font: 400 17px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #aaa3cd; }</style></defs>
+  <g clip-path="url(#m)">
+    <rect width="1200" height="150" fill="#15122a"/>
+    <path fill="#7fe0c9" opacity="0.18" d="M0 110 Q150 80 300 110 T600 110 T900 110 T1200 110 T1500 110 T1800 110 V150 H0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="9s" repeatCount="indefinite"/></path>
+    <path fill="#ff9a8b" opacity="0.22" d="M0 122 Q150 100 300 122 T600 122 T900 122 T1200 122 T1500 122 T1800 122 V150 H0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-600 0" to="0 0" dur="13s" repeatCount="indefinite"/></path>
+  </g>
+  <text class="h" x="600" y="58" text-anchor="middle">Let's build something together</text>
+  <text class="p" x="600" y="88" text-anchor="middle">Data, automation and AI agent projects</text>
+</svg>

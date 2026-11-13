@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ana Cristina Cuevas García">
+  <meta name="description" content="Portafolio de Ana Cuevas, analista de datos e inteligencia artificial: agentes de IA, automatización con n8n y modelos de machine learning en Python." data-en="Portfolio of Ana Cuevas, data and AI analyst: AI agents, n8n automation and machine learning models in Python.">
+  <title data-en="Ana Cuevas | Data &amp; AI Analyst">Ana Cuevas | Analista de datos e IA</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+  <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido" data-en="Skip to content">Ir al contenido</a>
+
+  <header class="barra">
+    <a class="marca" href="#inicio" aria-label="Ana Cuevas, inicio">Ana Cuevas</a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#experiencia" data-en="Experience">Experiencia</a>
+      <a href="#proyectos" data-en="Projects">Proyectos</a>
+      <a href="#habilidades" data-en="Skills">Habilidades</a>
+      <a href="#contacto" data-en="Contact">Contacto</a>
+    </nav>
+    <button class="idioma" id="idioma" type="button" aria-label="Switch to English">
+      <span data-lang="es" aria-current="true">ES</span><span aria-hidden="true">/</span><span data-lang="en">EN</span>
+    </button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Inicio -->
+    <section class="inicio" id="inicio">
+      <div class="inicio-texto">
+        <h1>Ana Cuevas</h1>
+        <p class="rol" data-en="Data and artificial intelligence analyst">Analista de datos e inteligencia artificial</p>
+        <p class="entrada" data-en="I build AI agents that read text and images, automate work with n8n, and train machine learning models in Python. I work at Fundación Televisa and study Computer Science at UNAM.">Construyo agentes de IA que leen texto e imágenes, automatizo trabajo con n8n y entreno modelos de machine learning en Python. Trabajo en Fundación Televisa y estudio Ciencias de la Computación en la UNAM.</p>
+        <div class="acciones">
+          <a class="boton boton-lleno" href="#proyectos" data-en="See projects">Ver proyectos</a>
+          <a class="boton" href="mailto:annacuga12@gmail.com" data-en="Email me">Escríbeme</a>
+        </div>
+      </div>
+
+      <figure class="flujo" aria-labelledby="flujo-pie">
+        <svg viewBox="0 18 560 264" role="img" aria-labelledby="flujo-pie">
+          <!-- conexiones -->
+          <path class="cable" d="M160 70 H205"/>
+          <path class="cable" d="M355 70 H400"/>
+          <path class="cable cable-sub" d="M250 110 C250 170 85 150 85 210"/>
+          <path class="cable cable-sub" d="M280 110 V210"/>
+          <path class="cable cable-sub" d="M310 110 C310 170 475 150 475 210"/>
+          <circle class="pulso" r="5">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M160 70 H205 M355 70 H400" keyPoints="0;0.5;0.5;1" keyTimes="0;0.35;0.65;1" calcMode="linear"/>
+          </circle>
+
+          <!-- nodos principales -->
+          <g class="nodo">
+            <rect x="10" y="40" width="150" height="60" rx="10"/>
+            <text class="nodo-nombre" x="26" y="66" data-en="Message">Mensaje</text>
+            <text class="nodo-nota" x="26" y="85" data-en="text or image">texto o imagen</text>
+          </g>
+          <g class="nodo nodo-agente">
+            <rect x="205" y="30" width="150" height="80" rx="10"/>
+            <text class="nodo-nombre" x="221" y="64" data-en="AI agent">Agente IA</text>
+            <text class="nodo-nota" x="221" y="84" data-en="calls the tools">decide y responde</text>
+          </g>
+          <g class="nodo">
+            <rect x="400" y="40" width="150" height="60" rx="10"/>
+            <text class="nodo-nombre" x="416" y="66" data-en="Reply">Respuesta</text>
+            <text class="nodo-nota" x="416" y="85" data-en="to the user">al usuario</text>
+          </g>
+
+          <!-- herramientas del agente -->
+          <g class="nodo nodo-sub">
+            <rect x="10" y="210" width="150" height="60" rx="30"/>
+            <text class="nodo-nombre" x="85" y="237" text-anchor="middle" data-en="LLM">Modelo LLM</text>
+            <text class="nodo-nota" x="85" y="255" text-anchor="middle">OpenAI API</text>
+          </g>
+          <g class="nodo nodo-sub">
+            <rect x="205" y="210" width="150" height="60" rx="30"/>
+            <text class="nodo-nombre" x="280" y="237" text-anchor="middle" data-en="Vision">Visión</text>
+            <text class="nodo-nota" x="280" y="255" text-anchor="middle" data-en="checks evidence">evalúa evidencias</text>
+          </g>
+          <g class="nodo nodo-sub">
+            <rect x="400" y="210" width="150" height="60" rx="30"/>
+            <text class="nodo-nombre" x="475" y="237" text-anchor="middle">MySQL</text>
+            <text class="nodo-nota" x="475" y="255" text-anchor="middle" data-en="chat context">contexto del chat</text>
+          </g>
+        </svg>
+        <figcaption id="flujo-pie" data-en="The kind of workflow I build in n8n: an agent that receives a message, calls a language model, a vision model and a database, and replies.">El tipo de flujo que construyo en n8n: un agente que recibe un mensaje, consulta un modelo de lenguaje, un modelo de visión y una base de datos, y responde.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="bloque" id="experiencia">
+      <h2 data-en="Experience">Experiencia</h2>
+      <ol class="linea">
+        <li>
+          <p class="fecha" data-en="Jan 2026 – present">Ene 2026 – actual</p>
+          <div>
+            <h3 data-en="Data and Artificial Intelligence Analyst">Analista de datos e inteligencia artificial</h3>
+            <p class="lugar">Fundación Televisa</p>
+            <p data-en="I design and maintain an AI educational assistant: an n8n workflow that combines AI agents, image analysis and MySQL to evaluate the evidence users send and keep the context of each conversation.">Diseño y mantengo un asistente educativo con IA: un flujo en n8n que combina agentes de IA, análisis de imágenes y MySQL para evaluar las evidencias que envían los usuarios y conservar el contexto de cada conversación.</p>
+          </div>
+        </li>
+        <li>
+          <p class="fecha" data-en="Apr 2025 – present">Abr 2025 – actual</p>
+          <div>
+            <h3 data-en="Python Expert">Experta en Python</h3>
+            <p class="lugar">Lottus Education</p>
+          </div>
+        </li>
+        <li>
+          <p class="fecha" data-en="Dec 2025">Dic 2025</p>
+          <div>
+            <h3 data-en="Instructor">Instructora</h3>
+            <p class="lugar" data-en="Tecnolochicas, a Fundación Televisa program">Tecnolochicas, programa de Fundación Televisa</p>
+          </div>
+        </li>
+        <li>
+          <p class="fecha" data-en="Jan – Jun 2023">Ene – Jun 2023</p>
+          <div>
+            <h3 data-en="Math and Physics Teacher">Profesora de Matemáticas y Física</h3>
+            <p class="lugar">CEFIMAT</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="bloque" id="proyectos">
+      <h2 data-en="Projects">Proyectos</h2>
+
+      <article class="proyecto proyecto-principal">
+        <div class="proyecto-cuerpo">
+          <h3 data-en="AI educational assistant and workflow automation">Asistente educativo con IA y automatización de flujos</h3>
+          <p data-en="An end-to-end automated workflow in n8n that integrates AI agents, computer vision and MySQL. It analyzes the images users submit as evidence and manages the conversation context dynamically.">Flujo automatizado de punta a punta en n8n que integra agentes de IA, visión por computadora y MySQL. Analiza las imágenes que los usuarios envían como evidencia y gestiona el contexto de la conversación de forma dinámica.</p>
+          <ul class="etiquetas">
+            <li>n8n</li><li data-en="AI agents">Agentes de IA</li><li>OpenAI API</li><li data-en="Computer vision">Visión por computadora</li><li>MySQL</li>
+          </ul>
+        </div>
+        <p class="proyecto-dato"><span>Multimodal</span><small data-en="Text and images. Work project, private code">Texto e imágenes. Proyecto de trabajo, código privado</small></p>
+      </article>
+
+      <article class="proyecto">
+        <div class="proyecto-cuerpo">
+          <h3 data-en="Hate speech classification on social media">Clasificación de mensajes de odio en redes sociales</h3>
+          <p data-en="A multiclass classifier that separates harmless messages from five kinds of hate speech. Text cleaning, lemmatization and TF-IDF, then Random Forest tuned with GridSearchCV and 5-fold cross-validation. Team project.">Clasificador multiclase que separa mensajes inofensivos de cinco tipos de discurso de odio. Limpieza de texto, lematización y TF-IDF, y después Random Forest ajustado con GridSearchCV y validación cruzada de 5 pliegues. Proyecto en equipo.</p>
+          <ul class="etiquetas">
+            <li>Python</li><li>scikit-learn</li><li>NLP</li><li>TF-IDF</li><li>Random Forest</li>
+          </ul>
+          <a class="enlace" href="https://github.com/AnnaCUGA/Hate-Speech-Classification" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+        </div>
+        <p class="proyecto-dato"><span>0.84</span><small>accuracy</small></p>
+      </article>
+
+      <article class="proyecto">
+        <div class="proyecto-cuerpo">
+          <h3 data-en="Forecasting diabetes cases in Mexico, 2000–2025">Predicción de casos de diabetes en México, 2000–2025</h3>
+          <p data-en="Exploratory analysis of yearly cases by state and a time-series forecast for 2024 and 2025. I compared ARIMA against Prophet and kept Prophet for its better fit.">Análisis exploratorio de casos anuales por entidad federativa y pronóstico de series de tiempo para 2024 y 2025. Comparé ARIMA contra Prophet y elegí Prophet por su mejor ajuste.</p>
+          <ul class="etiquetas">
+            <li>Python</li><li>pandas</li><li>statsmodels</li><li>ARIMA</li><li>Prophet</li>
+          </ul>
+          <a class="enlace" href="https://github.com/AnnaCUGA/PrediccionDiabetes_2024-2025" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+        </div>
+        <p class="proyecto-dato"><span data-en="24 years">24 años</span><small data-en="of data by state">de datos por estado</small></p>
+      </article>
+
+      <article class="proyecto">
+        <div class="proyecto-cuerpo">
+          <h3 data-en="Sleep disorder analysis">Análisis de trastornos del sueño</h3>
+          <p data-en="A study of 374 patients to find which factors go with insomnia and sleep apnea (weight, occupation, activity), plus a Random Forest model that supports an initial screening.">Estudio de 374 pacientes para encontrar qué factores acompañan al insomnio y a la apnea del sueño (peso, ocupación, actividad), más un modelo Random Forest que apoya un primer tamizaje.</p>
+          <ul class="etiquetas">
+            <li>Python</li><li>pandas</li><li>Seaborn</li><li>Plotly</li><li>scikit-learn</li>
+          </ul>
+          <a class="enlace" href="https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+        </div>
+        <p class="proyecto-dato"><span>90%</span><small>F1-score</small></p>
+      </article>
+
+      <article class="proyecto">
+        <div class="proyecto-cuerpo">
+          <h3 data-en="Medical image classification">Clasificación de imágenes médicas</h3>
+          <p data-en="Two image classification models for diagnostic support: brain images to detect Alzheimer's, and chest X-rays to detect pneumonia.">Dos modelos de clasificación de imágenes para apoyo al diagnóstico: imágenes cerebrales para detectar Alzheimer y radiografías de tórax para detectar neumonía.</p>
+          <ul class="etiquetas">
+            <li>Python</li><li data-en="Image classification">Clasificación de imágenes</li><li>Machine learning</li>
+          </ul>
+          <a class="enlace" href="https://github.com/AnnaCUGA/Brain-Xray-Alzheimer-Detection" target="_blank" rel="noopener" data-en="View Alzheimer's repository">Ver repositorio de Alzheimer</a>
+        </div>
+        <p class="proyecto-dato"><span data-en="2 models">2 modelos</span><small data-en="Alzheimer's and pneumonia">Alzheimer y neumonía</small></p>
+      </article>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="bloque" id="habilidades">
+      <h2 data-en="Skills">Habilidades</h2>
+      <dl class="habilidades">
+        <div>
+          <dt data-en="AI and automation">IA y automatización</dt>
+          <dd data-en="n8n, AI agents, OpenAI API, ManyChat, multimodal systems with LLMs and vision models">n8n, agentes de IA, OpenAI API, ManyChat, sistemas multimodales con LLM y modelos de visión</dd>
+        </div>
+        <div>
+          <dt data-en="Machine learning">Machine learning</dt>
+          <dd data-en="Python, scikit-learn, classification (SVM, Random Forest), time series (ARIMA, Prophet), NLP with TF-IDF">Python, scikit-learn, clasificación (SVM, Random Forest), series de tiempo (ARIMA, Prophet), NLP con TF-IDF</dd>
+        </div>
+        <div>
+          <dt data-en="Data">Datos</dt>
+          <dd data-en="pandas, NumPy, exploratory analysis, preprocessing, ETL processes, MySQL, visualization with Matplotlib, Seaborn and Plotly">pandas, NumPy, análisis exploratorio, preprocesamiento, procesos ETL, MySQL, visualización con Matplotlib, Seaborn y Plotly</dd>
+        </div>
+        <div>
+          <dt data-en="Tools and languages">Herramientas e idiomas</dt>
+          <dd data-en="Git and GitHub, Jupyter. Spanish (native), English (B2)">Git y GitHub, Jupyter. Español (nativo), inglés (B2)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Formación -->
+    <section class="bloque" id="formacion">
+      <h2 data-en="Education">Formación</h2>
+      <ol class="linea">
+        <li>
+          <p class="fecha" data-en="2021 – present">2021 – actual</p>
+          <div>
+            <h3 data-en="B.Sc. in Computer Science">Licenciatura en Ciencias de la Computación</h3>
+            <p class="lugar" data-en="School of Sciences, UNAM">Facultad de Ciencias, UNAM</p>
+          </div>
+        </li>
+        <li>
+          <p class="fecha" data-en="Apr – Sep 2024">Abr – Sep 2024</p>
+          <div>
+            <h3 data-en="Data Scientist Jr. diploma">Diplomado Data Scientist Jr.</h3>
+            <p class="lugar">Tecnológico Nacional de México</p>
+          </div>
+        </li>
+        <li>
+          <p class="fecha" data-en="Nov 2023 – Mar 2024">Nov 2023 – Mar 2024</p>
+          <div>
+            <h3 data-en="Data Scientist Jr. course">Curso Data Scientist Jr.</h3>
+            <p class="lugar" data-en="BEDU and Tecnolochicas">BEDU y Tecnolochicas</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contacto -->
+    <section class="bloque contacto" id="contacto">
+      <h2 data-en="Let's talk">Hablemos</h2>
+      <p class="entrada" data-en="If you have a project with data, automation or AI agents, write to me.">Si tienes un proyecto de datos, automatización o agentes de IA, escríbeme.</p>
+      <ul class="contacto-lista">
+        <li><span data-en="Email">Correo</span><a href="mailto:annacuga12@gmail.com">annacuga12@gmail.com</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/anna-cuevas12/" target="_blank" rel="noopener">linkedin.com/in/anna-cuevas12</a></li>
+        <li><span>GitHub</span><a href="https://github.com/AnnaCUGA" target="_blank" rel="noopener">github.com/AnnaCUGA</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; <span id="anio">2026</span> Ana Cristina Cuevas García</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
