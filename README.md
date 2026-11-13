@@ -1,86 +1,57 @@
-# Hi, my name is Ana Cuevas!
+<p align="center">
+  <img src="assets/banner.svg" alt="Ana Cuevas, Data and AI Analyst. Workflow diagram: a message reaches an AI agent that calls a language model, a vision model and MySQL, and sends a reply." width="100%">
+</p>
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FFA07A&width=435&lines=Welcome+to+my+GitHub+profile!;Passionate+about+AI+and+Data;Let's+build+something+amazing!" alt="Typing SVG" />
-</div>
+## Hi, I'm Ana 👋
 
+I'm a **Data and Artificial Intelligence Analyst at Fundación Televisa** and a Computer Science student at UNAM's School of Sciences. I build AI agents that work with text and images, automate workflows with n8n, and train machine learning models in Python.
 
-## 🔍 About Me
+- 🤖 Building an AI educational assistant: an n8n workflow that combines AI agents, image analysis and MySQL
+- 🐍 Python Expert at Lottus Education
+- 👩‍🏫 Instructor at Tecnolochicas, and former math and physics teacher
+- 🌎 Spanish (native) and English (B2)
 
-<div class="hover-effect" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin: 10px 0;">
+## Tech stack
 
-- <span class="pulse">🎓</span> <b>Computer Science</b> at UNAM  
+**AI and automation**
 
-- <span class="pulse">📊</span> Certified <b> Data Scientist</b>  
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![OpenAI API](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![AI Agents](https://img.shields.io/badge/AI_Agents-1F1B3A?style=for-the-badge)
+![ManyChat](https://img.shields.io/badge/ManyChat-0084FF?style=for-the-badge)
 
-- <span class="pulse">👩‍🏫</span> Former as a Math/Physics/Programation professor  
+**Data and machine learning**
 
-- <span class="pulse">🌍</span> English <b>B2</b> | Spanish <b>Native</b>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-</div>
+**Databases and tools**
 
----
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-## 🛠 Tech Stack
+## Featured projects
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" class="hover-effect">
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" class="hover-effect">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" class="hover-effect">
-  <img src="https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" class="hover-effect">
-  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" class="hover-effect">
-  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" class="hover-effect">
-</div>
+| Project | What it does | Built with | Result |
+| --- | --- | --- | --- |
+| **AI educational assistant** | End-to-end automated workflow that evaluates the images users submit as evidence and manages conversation context | n8n, AI agents, computer vision, MySQL | Work project, private code |
+| [**Hate speech classification**](https://github.com/AnnaCUGA/Hate-Speech-Classification) | Multiclass classifier that separates harmless messages from five kinds of hate speech on social media | scikit-learn, TF-IDF, Random Forest | 0.84 accuracy |
+| [**Diabetes forecast for Mexico**](https://github.com/AnnaCUGA/PrediccionDiabetes_2024-2025) | Time-series forecast of diabetes cases for 2024 and 2025 from data by state since 2000 | pandas, statsmodels, ARIMA, Prophet | Prophet chosen for best fit |
+| [**Sleep disorder analysis**](https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o) | Study of 374 patients and a model that supports an initial screening for insomnia and sleep apnea | pandas, Seaborn, Plotly, scikit-learn | 90% F1-score |
+| [**Alzheimer's detection from brain images**](https://github.com/AnnaCUGA/Brain-Xray-Alzheimer-Detection) | Image classification model for diagnostic support | Python, machine learning | Class project |
 
----
+## Education and certifications
 
-## 🚀 Featured Projects
+- **B.Sc. in Computer Science**, School of Sciences, UNAM (2021 – present)
+- **Data Scientist Jr. diploma**, Tecnológico Nacional de México (2024)
+- **Data Scientist Jr. course**, BEDU and Tecnolochicas (2023 – 2024)
 
-<details>
-  <summary><b>🧠 X-ray Classification for Alzheimer's</b> (Click to expand)</summary>
-  <div style="padding: 15px;">
-    • Implemented SVM/Random Forest models<br>
-    • Achieved 92% accuracy<br>
-    • <a href="https://github.com/AnnaCUGA">View on GitHub</a>
-  </div>
-</details>
+## Let's connect
 
-<details>
-  <summary><b>🤖 Hate Speech Detection</b> (Click to expand)</summary>
-  <div style="padding: 15px;">
-    • NLP pipeline development<br>
-    • Predictive modeling<br>
-    • <a href="https://github.com/AnnaCUGA">View on GitHub</a>
-  </div>
-</details>
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AnnaCUGA&show_icons=true&theme=radical" class="hover-effect">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnnaCUGA&layout=compact&theme=radical" class="hover-effect">
-</div>
-
----
-
-## 📫 Let's Connect!
-
-<div align="center" style="margin-top: 20px;">
-  <a href="mailto:annacuga12@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" class="hover-effect">
-  </a>
-  <a href="https://www.linkedin.com/in/anna-cuevas12/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" class="hover-effect">
-  </a>
-  <a href="https://github.com/AnnaCUGA">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" class="hover-effect">
-  </a>
-</div>
-
-<div align="center" style="margin-top: 30px;">
-  <img src="https://komarev.com/ghpvc/?username=AnnaCUGA&color=blueviolet&style=flat-square" alt="Profile views">
-</div>
-
-⭐ From [AnnaCUGA](https://github.com/AnnaCUGA)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anna-cuevas12/)
+[![Email](https://img.shields.io/badge/Email-FF9A8B?style=for-the-badge&logo=gmail&logoColor=15122A)](mailto:annacuga12@gmail.com)
