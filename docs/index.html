@@ -9,20 +9,26 @@
   <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
   <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="saltar" href="#contenido" data-en="Skip to content">Ir al contenido</a>
+  <div class="progreso" aria-hidden="true"><span id="progreso"></span></div>
 
   <header class="barra">
     <a class="marca" href="#inicio" aria-label="Ana Cuevas, inicio">Ana Cuevas</a>
-    <nav class="menu" aria-label="Secciones">
+    <nav class="menu" id="menu" aria-label="Secciones">
       <a href="#experiencia" data-en="Experience">Experiencia</a>
       <a href="#proyectos" data-en="Projects">Proyectos</a>
       <a href="#habilidades" data-en="Skills">Habilidades</a>
+      <a href="#formacion" data-en="Education">Formación</a>
       <a href="#contacto" data-en="Contact">Contacto</a>
     </nav>
     <button class="idioma" id="idioma" type="button" aria-label="Switch to English">
       <span data-lang="es" aria-current="true">ES</span><span aria-hidden="true">/</span><span data-lang="en">EN</span>
+    </button>
+    <button class="hamburguesa" id="hamburguesa" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+      <span></span><span></span><span></span>
     </button>
   </header>
 
@@ -30,71 +36,100 @@
 
     <!-- Inicio -->
     <section class="inicio" id="inicio">
+      <div class="brillo brillo-a" aria-hidden="true"></div>
+      <div class="brillo brillo-b" aria-hidden="true"></div>
+
       <div class="inicio-texto">
+        <p class="estado"><span class="punto" aria-hidden="true"></span><span data-en="Data and AI analyst at Fundación Televisa">Analista de datos e IA en Fundación Televisa</span></p>
         <h1>Ana Cuevas</h1>
-        <p class="rol" data-en="Data and artificial intelligence analyst">Analista de datos e inteligencia artificial</p>
-        <p class="entrada" data-en="I build AI agents that read text and images, automate work with n8n, and train machine learning models in Python. I work at Fundación Televisa and study Computer Science at UNAM.">Construyo agentes de IA que leen texto e imágenes, automatizo trabajo con n8n y entreno modelos de machine learning en Python. Trabajo en Fundación Televisa y estudio Ciencias de la Computación en la UNAM.</p>
+        <p class="construyo"><span data-en="I build">Construyo</span> <span class="escribe" id="escribe">agentes de IA</span><span class="cursor" aria-hidden="true"></span></p>
+        <p class="entrada" data-en="AI agents that read text and images, automation with n8n, and machine learning models in Python. I study Computer Science at UNAM.">Agentes de IA que leen texto e imágenes, automatización con n8n y modelos de machine learning en Python. Estudio Ciencias de la Computación en la UNAM.</p>
         <div class="acciones">
           <a class="boton boton-lleno" href="#proyectos" data-en="See projects">Ver proyectos</a>
-          <a class="boton" href="mailto:annacuga12@gmail.com" data-en="Email me">Escríbeme</a>
+          <a class="boton" href="#contacto" data-en="Contact me">Contáctame</a>
         </div>
       </div>
 
       <figure class="flujo" aria-labelledby="flujo-pie">
+        <div class="flujo-cabecera">
+          <span class="flujo-nombre" data-en="Agent demo">Demo del agente</span>
+          <button class="flujo-pausa" id="flujo-pausa" type="button" data-en="Pause">Pausar</button>
+        </div>
         <svg viewBox="0 18 560 264" role="img" aria-labelledby="flujo-pie">
-          <!-- conexiones -->
-          <path class="cable" d="M160 70 H205"/>
-          <path class="cable" d="M355 70 H400"/>
-          <path class="cable cable-sub" d="M250 110 C250 170 85 150 85 210"/>
-          <path class="cable cable-sub" d="M280 110 V210"/>
-          <path class="cable cable-sub" d="M310 110 C310 170 475 150 475 210"/>
-          <circle class="pulso" r="5">
-            <animateMotion dur="3.2s" repeatCount="indefinite" path="M160 70 H205 M355 70 H400" keyPoints="0;0.5;0.5;1" keyTimes="0;0.35;0.65;1" calcMode="linear"/>
-          </circle>
+          <path class="cable" data-cable="entrada" d="M160 70 H205"/>
+          <path class="cable" data-cable="salida" d="M355 70 H400"/>
+          <path class="cable cable-sub" data-cable="llm" d="M250 110 C250 170 85 150 85 210"/>
+          <path class="cable cable-sub" data-cable="vision" d="M280 110 V210"/>
+          <path class="cable cable-sub" data-cable="mysql" d="M310 110 C310 170 475 150 475 210"/>
 
-          <!-- nodos principales -->
-          <g class="nodo">
+          <g class="nodo" data-nodo="mensaje">
             <rect x="10" y="40" width="150" height="60" rx="10"/>
             <text class="nodo-nombre" x="26" y="66" data-en="Message">Mensaje</text>
             <text class="nodo-nota" x="26" y="85" data-en="text or image">texto o imagen</text>
           </g>
-          <g class="nodo nodo-agente">
+          <g class="nodo nodo-agente" data-nodo="agente">
             <rect x="205" y="30" width="150" height="80" rx="10"/>
             <text class="nodo-nombre" x="221" y="64" data-en="AI agent">Agente IA</text>
             <text class="nodo-nota" x="221" y="84" data-en="calls the tools">decide y responde</text>
           </g>
-          <g class="nodo">
+          <g class="nodo" data-nodo="respuesta">
             <rect x="400" y="40" width="150" height="60" rx="10"/>
             <text class="nodo-nombre" x="416" y="66" data-en="Reply">Respuesta</text>
             <text class="nodo-nota" x="416" y="85" data-en="to the user">al usuario</text>
           </g>
-
-          <!-- herramientas del agente -->
-          <g class="nodo nodo-sub">
+          <g class="nodo nodo-sub" data-nodo="llm">
             <rect x="10" y="210" width="150" height="60" rx="30"/>
             <text class="nodo-nombre" x="85" y="237" text-anchor="middle" data-en="LLM">Modelo LLM</text>
-            <text class="nodo-nota" x="85" y="255" text-anchor="middle">OpenAI API</text>
+            <text class="nodo-nota" x="85" y="255" text-anchor="middle" data-en="writes the reply">redacta</text>
           </g>
-          <g class="nodo nodo-sub">
+          <g class="nodo nodo-sub" data-nodo="vision">
             <rect x="205" y="210" width="150" height="60" rx="30"/>
             <text class="nodo-nombre" x="280" y="237" text-anchor="middle" data-en="Vision">Visión</text>
             <text class="nodo-nota" x="280" y="255" text-anchor="middle" data-en="checks evidence">evalúa evidencias</text>
           </g>
-          <g class="nodo nodo-sub">
+          <g class="nodo nodo-sub" data-nodo="mysql">
             <rect x="400" y="210" width="150" height="60" rx="30"/>
             <text class="nodo-nombre" x="475" y="237" text-anchor="middle">MySQL</text>
             <text class="nodo-nota" x="475" y="255" text-anchor="middle" data-en="chat context">contexto del chat</text>
           </g>
         </svg>
-        <figcaption id="flujo-pie" data-en="The kind of workflow I build in n8n: an agent that receives a message, calls a language model, a vision model and a database, and replies.">El tipo de flujo que construyo en n8n: un agente que recibe un mensaje, consulta un modelo de lenguaje, un modelo de visión y una base de datos, y responde.</figcaption>
+        <ol class="bitacora" id="bitacora">
+          <li data-en="A message arrives with a photo">Llega un mensaje con una foto</li>
+          <li data-en="The agent decides which tools to use">El agente decide qué herramientas usar</li>
+          <li data-en="Vision checks the image against the criteria">Visión revisa la imagen contra los criterios</li>
+          <li data-en="MySQL stores the record and the context">MySQL guarda el registro y el contexto</li>
+          <li data-en="The language model writes the reply">El modelo de lenguaje redacta la respuesta</li>
+          <li data-en="The reply goes out to the user">La respuesta sale hacia el usuario</li>
+        </ol>
+        <figcaption id="flujo-pie" data-en="The kind of workflow I build in n8n, step by step.">El tipo de flujo que construyo en n8n, paso a paso.</figcaption>
       </figure>
+    </section>
+
+    <!-- Cifras -->
+    <section class="cifras" aria-label="Cifras de mis proyectos">
+      <div class="cifra" data-revelar>
+        <p class="cifra-numero"><span data-cuenta="4561">4,561</span></p>
+        <p class="cifra-texto" data-en="brain images classified">imágenes cerebrales clasificadas</p>
+      </div>
+      <div class="cifra" data-revelar>
+        <p class="cifra-numero"><span data-cuenta="374">374</span></p>
+        <p class="cifra-texto" data-en="patients in the sleep study">pacientes en el estudio del sueño</p>
+      </div>
+      <div class="cifra" data-revelar>
+        <p class="cifra-numero"><span data-cuenta="24">24</span></p>
+        <p class="cifra-texto" data-en="years of health data modeled">años de datos de salud modelados</p>
+      </div>
+      <div class="cifra" data-revelar>
+        <p class="cifra-numero"><span data-cuenta="0.84" data-dec="2">0.84</span></p>
+        <p class="cifra-texto" data-en="accuracy detecting hate speech">de accuracy detectando discurso de odio</p>
+      </div>
     </section>
 
     <!-- Experiencia -->
     <section class="bloque" id="experiencia">
-      <h2 data-en="Experience">Experiencia</h2>
+      <h2 data-revelar data-en="Experience">Experiencia</h2>
       <ol class="linea">
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Jan 2026 – present">Ene 2026 – actual</p>
           <div>
             <h3 data-en="Data and Artificial Intelligence Analyst">Analista de datos e inteligencia artificial</h3>
@@ -102,21 +137,21 @@
             <p data-en="I design and maintain an AI educational assistant: an n8n workflow that combines AI agents, image analysis and MySQL to evaluate the evidence users send and keep the context of each conversation.">Diseño y mantengo un asistente educativo con IA: un flujo en n8n que combina agentes de IA, análisis de imágenes y MySQL para evaluar las evidencias que envían los usuarios y conservar el contexto de cada conversación.</p>
           </div>
         </li>
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Apr 2025 – present">Abr 2025 – actual</p>
           <div>
             <h3 data-en="Python Expert">Experta en Python</h3>
             <p class="lugar">Lottus Education</p>
           </div>
         </li>
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Dec 2025">Dic 2025</p>
           <div>
             <h3 data-en="Instructor">Instructora</h3>
             <p class="lugar" data-en="Tecnolochicas, a Fundación Televisa program">Tecnolochicas, programa de Fundación Televisa</p>
           </div>
         </li>
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Jan – Jun 2023">Ene – Jun 2023</p>
           <div>
             <h3 data-en="Math and Physics Teacher">Profesora de Matemáticas y Física</h3>
@@ -128,110 +163,169 @@
 
     <!-- Proyectos -->
     <section class="bloque" id="proyectos">
-      <h2 data-en="Projects">Proyectos</h2>
+      <h2 data-revelar data-en="Projects">Proyectos</h2>
 
-      <article class="proyecto proyecto-principal">
-        <div class="proyecto-cuerpo">
-          <h3 data-en="AI educational assistant and workflow automation">Asistente educativo con IA y automatización de flujos</h3>
-          <p data-en="An end-to-end automated workflow in n8n that integrates AI agents, computer vision and MySQL. It analyzes the images users submit as evidence and manages the conversation context dynamically.">Flujo automatizado de punta a punta en n8n que integra agentes de IA, visión por computadora y MySQL. Analiza las imágenes que los usuarios envían como evidencia y gestiona el contexto de la conversación de forma dinámica.</p>
-          <ul class="etiquetas">
-            <li>n8n</li><li data-en="AI agents">Agentes de IA</li><li>OpenAI API</li><li data-en="Computer vision">Visión por computadora</li><li>MySQL</li>
-          </ul>
-        </div>
-        <p class="proyecto-dato"><span>Multimodal</span><small data-en="Text and images. Work project, private code">Texto e imágenes. Proyecto de trabajo, código privado</small></p>
-      </article>
+      <div class="filtros" role="group" aria-label="Filtrar proyectos" data-revelar>
+        <button type="button" class="filtro" data-filtro="todos" aria-pressed="true" data-en="All">Todos</button>
+        <button type="button" class="filtro" data-filtro="agentes" aria-pressed="false" data-en="AI agents">Agentes de IA</button>
+        <button type="button" class="filtro" data-filtro="ml" aria-pressed="false">Machine learning</button>
+        <button type="button" class="filtro" data-filtro="datos" aria-pressed="false" data-en="Data analysis">Análisis de datos</button>
+      </div>
 
-      <article class="proyecto">
-        <div class="proyecto-cuerpo">
-          <h3 data-en="Hate speech classification on social media">Clasificación de mensajes de odio en redes sociales</h3>
-          <p data-en="A multiclass classifier that separates harmless messages from five kinds of hate speech. Text cleaning, lemmatization and TF-IDF, then Random Forest tuned with GridSearchCV and 5-fold cross-validation. Team project.">Clasificador multiclase que separa mensajes inofensivos de cinco tipos de discurso de odio. Limpieza de texto, lematización y TF-IDF, y después Random Forest ajustado con GridSearchCV y validación cruzada de 5 pliegues. Proyecto en equipo.</p>
-          <ul class="etiquetas">
-            <li>Python</li><li>scikit-learn</li><li>NLP</li><li>TF-IDF</li><li>Random Forest</li>
-          </ul>
-          <a class="enlace" href="https://github.com/AnnaCUGA/Hate-Speech-Classification" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
-        </div>
-        <p class="proyecto-dato"><span>0.84</span><small>accuracy</small></p>
-      </article>
+      <div class="proyectos">
+        <article class="proyecto proyecto-principal" data-cat="agentes" data-revelar>
+          <div class="proyecto-cuerpo">
+            <h3 data-en="AI educational assistant and workflow automation">Asistente educativo con IA y automatización de flujos</h3>
+            <p data-en="An end-to-end automated workflow in n8n that integrates AI agents, computer vision and MySQL. It analyzes the images users submit as evidence and manages the conversation context dynamically.">Flujo automatizado de punta a punta en n8n que integra agentes de IA, visión por computadora y MySQL. Analiza las imágenes que los usuarios envían como evidencia y gestiona el contexto de la conversación de forma dinámica.</p>
+            <ul class="etiquetas">
+              <li>n8n</li><li data-en="AI agents">Agentes de IA</li><li>LLM</li><li data-en="Computer vision">Visión por computadora</li><li>RAG</li><li>MySQL</li>
+            </ul>
+          </div>
+          <div class="proyecto-dato">
+            <p class="dato-numero">Multimodal</p>
+            <p class="dato-texto" data-en="Text and images. Work project, private code">Texto e imágenes. Proyecto de trabajo, código privado</p>
+          </div>
+        </article>
 
-      <article class="proyecto">
-        <div class="proyecto-cuerpo">
-          <h3 data-en="Forecasting diabetes cases in Mexico, 2000–2025">Predicción de casos de diabetes en México, 2000–2025</h3>
-          <p data-en="Exploratory analysis of yearly cases by state and a time-series forecast for 2024 and 2025. I compared ARIMA against Prophet and kept Prophet for its better fit.">Análisis exploratorio de casos anuales por entidad federativa y pronóstico de series de tiempo para 2024 y 2025. Comparé ARIMA contra Prophet y elegí Prophet por su mejor ajuste.</p>
-          <ul class="etiquetas">
-            <li>Python</li><li>pandas</li><li>statsmodels</li><li>ARIMA</li><li>Prophet</li>
-          </ul>
-          <a class="enlace" href="https://github.com/AnnaCUGA/PrediccionDiabetes_2024-2025" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
-        </div>
-        <p class="proyecto-dato"><span data-en="24 years">24 años</span><small data-en="of data by state">de datos por estado</small></p>
-      </article>
+        <article class="proyecto" data-cat="ml" data-revelar>
+          <div class="proyecto-cuerpo">
+            <h3 data-en="Hate speech classification on social media">Clasificación de mensajes de odio en redes sociales</h3>
+            <p data-en="A multiclass classifier that separates harmless messages from five kinds of hate speech. Text cleaning, lemmatization and TF-IDF, then Random Forest tuned with GridSearchCV and 5-fold cross-validation. Team project.">Clasificador multiclase que separa mensajes inofensivos de cinco tipos de discurso de odio. Limpieza de texto, lematización y TF-IDF, y después Random Forest ajustado con GridSearchCV y validación cruzada de 5 pliegues. Proyecto en equipo.</p>
+            <ul class="etiquetas">
+              <li>Python</li><li>scikit-learn</li><li>NLP</li><li>TF-IDF</li><li>Random Forest</li>
+            </ul>
+            <a class="enlace" href="https://github.com/AnnaCUGA/Hate-Speech-Classification" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+          </div>
+          <div class="proyecto-dato">
+            <p class="dato-numero"><span data-cuenta="0.84" data-dec="2">0.84</span></p>
+            <p class="dato-texto">accuracy</p>
+            <div class="grafica columnas" role="img" aria-label="Precisión por clase: sexismo 0.73, no odio 0.81, origen 0.89, racismo 0.89, religión 0.91, orientación 0.65">
+              <span style="--v:73" data-v=".73"></span><span style="--v:81" data-v=".81"></span><span style="--v:89" data-v=".89"></span><span style="--v:89" data-v=".89"></span><span style="--v:91" data-v=".91"></span><span style="--v:65" data-v=".65"></span>
+            </div>
+            <p class="grafica-pie" data-en="precision by class">precisión por clase</p>
+          </div>
+        </article>
 
-      <article class="proyecto">
-        <div class="proyecto-cuerpo">
-          <h3 data-en="Sleep disorder analysis">Análisis de trastornos del sueño</h3>
-          <p data-en="A study of 374 patients to find which factors go with insomnia and sleep apnea (weight, occupation, activity), plus a Random Forest model that supports an initial screening.">Estudio de 374 pacientes para encontrar qué factores acompañan al insomnio y a la apnea del sueño (peso, ocupación, actividad), más un modelo Random Forest que apoya un primer tamizaje.</p>
-          <ul class="etiquetas">
-            <li>Python</li><li>pandas</li><li>Seaborn</li><li>Plotly</li><li>scikit-learn</li>
-          </ul>
-          <a class="enlace" href="https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
-        </div>
-        <p class="proyecto-dato"><span>90%</span><small>F1-score</small></p>
-      </article>
+        <article class="proyecto" data-cat="datos ml" data-revelar>
+          <div class="proyecto-cuerpo">
+            <h3 data-en="Forecasting diabetes cases in Mexico, 2000–2025">Predicción de casos de diabetes en México, 2000–2025</h3>
+            <p data-en="Exploratory analysis of yearly cases by state and a time-series forecast for 2024 and 2025. I compared ARIMA against Prophet and kept Prophet for its better fit.">Análisis exploratorio de casos anuales por entidad federativa y pronóstico de series de tiempo para 2024 y 2025. Comparé ARIMA contra Prophet y elegí Prophet por su mejor ajuste.</p>
+            <ul class="etiquetas">
+              <li>Python</li><li>pandas</li><li>statsmodels</li><li>ARIMA</li><li>Prophet</li>
+            </ul>
+            <a class="enlace" href="https://github.com/AnnaCUGA/PrediccionDiabetes_2024-2025" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+          </div>
+          <div class="proyecto-dato">
+            <p class="dato-numero"><span data-cuenta="24">24</span> <span data-en="years">años</span></p>
+            <p class="dato-texto" data-en="of data by state">de datos por estado</p>
+            <ul class="duelo">
+              <li>ARIMA</li>
+              <li class="elegido">Prophet <span data-en="chosen">elegido</span></li>
+            </ul>
+          </div>
+        </article>
 
-      <article class="proyecto">
-        <div class="proyecto-cuerpo">
-          <h3 data-en="Medical image classification">Clasificación de imágenes médicas</h3>
-          <p data-en="Two image classification models for diagnostic support: brain images to detect Alzheimer's, and chest X-rays to detect pneumonia.">Dos modelos de clasificación de imágenes para apoyo al diagnóstico: imágenes cerebrales para detectar Alzheimer y radiografías de tórax para detectar neumonía.</p>
-          <ul class="etiquetas">
-            <li>Python</li><li data-en="Image classification">Clasificación de imágenes</li><li>Machine learning</li>
-          </ul>
-          <a class="enlace" href="https://github.com/AnnaCUGA/Brain-Xray-Alzheimer-Detection" target="_blank" rel="noopener" data-en="View Alzheimer's repository">Ver repositorio de Alzheimer</a>
-        </div>
-        <p class="proyecto-dato"><span data-en="2 models">2 modelos</span><small data-en="Alzheimer's and pneumonia">Alzheimer y neumonía</small></p>
-      </article>
+        <article class="proyecto" data-cat="datos ml" data-revelar>
+          <div class="proyecto-cuerpo">
+            <h3 data-en="Sleep disorder analysis">Análisis de trastornos del sueño</h3>
+            <p data-en="A study of 374 patients to find which factors go with insomnia and sleep apnea (weight, occupation, activity), plus a Random Forest model that supports an initial screening.">Estudio de 374 pacientes para encontrar qué factores acompañan al insomnio y a la apnea del sueño (peso, ocupación, actividad), más un modelo Random Forest que apoya un primer tamizaje.</p>
+            <ul class="etiquetas">
+              <li>Python</li><li>pandas</li><li>Seaborn</li><li>Plotly</li><li>scikit-learn</li>
+            </ul>
+            <a class="enlace" href="https://github.com/AnnaCUGA/Analisis-de-transtorno-del-sue-o" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+          </div>
+          <div class="proyecto-dato">
+            <p class="dato-numero"><span data-cuenta="90">90</span>%</p>
+            <p class="dato-texto">F1-score</p>
+            <dl class="grafica barras">
+              <div><dt data-en="Precision">Precisión</dt><dd style="--v:92"><span>92%</span></dd></div>
+              <div><dt>Recall</dt><dd style="--v:89"><span>89%</span></dd></div>
+              <div><dt>F1</dt><dd style="--v:90"><span>90%</span></dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="proyecto" data-cat="ml" data-revelar>
+          <div class="proyecto-cuerpo">
+            <h3 data-en="Medical image classification">Clasificación de imágenes médicas</h3>
+            <p data-en="Two image classification models for diagnostic support: brain images to detect Alzheimer's across four severity levels, and chest X-rays to detect pneumonia.">Dos modelos de clasificación de imágenes para apoyo al diagnóstico: imágenes cerebrales para detectar Alzheimer en cuatro niveles de severidad y radiografías de tórax para detectar neumonía.</p>
+            <ul class="etiquetas">
+              <li>Python</li><li>scikit-learn</li><li>scikit-image</li><li data-en="Image classification">Clasificación de imágenes</li>
+            </ul>
+            <a class="enlace" href="https://github.com/AnnaCUGA/Brain-Xray-Alzheimer-Detection" target="_blank" rel="noopener" data-en="View Alzheimer's repository">Ver repositorio de Alzheimer</a>
+          </div>
+          <div class="proyecto-dato">
+            <p class="dato-numero"><span data-cuenta="4561">4,561</span></p>
+            <p class="dato-texto" data-en="brain images in 4 classes">imágenes cerebrales en 4 clases</p>
+            <dl class="grafica barras">
+              <div><dt data-en="None">Sin demencia</dt><dd style="--v:100"><span>2,000</span></dd></div>
+              <div><dt data-en="Very mild">Muy leve</dt><dd style="--v:89.6"><span>1,792</span></dd></div>
+              <div><dt data-en="Mild">Leve</dt><dd style="--v:35.9"><span>717</span></dd></div>
+              <div><dt data-en="Moderate">Moderada</dt><dd style="--v:2.6"><span>52</span></dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Habilidades -->
     <section class="bloque" id="habilidades">
-      <h2 data-en="Skills">Habilidades</h2>
+      <h2 data-revelar data-en="Skills">Habilidades</h2>
+
+      <div class="cinta" aria-hidden="true">
+        <ul class="cinta-pista">
+          <li>Python</li><li>n8n</li><li>Google Gemini</li><li>LangChain</li><li>RAG</li><li>MySQL</li><li>scikit-learn</li><li>pandas</li><li>Cloud SQL</li><li>Supabase</li><li>Prophet</li><li>Plotly</li><li>ManyChat</li><li>AppSheet</li>
+          <li>Python</li><li>n8n</li><li>Google Gemini</li><li>LangChain</li><li>RAG</li><li>MySQL</li><li>scikit-learn</li><li>pandas</li><li>Cloud SQL</li><li>Supabase</li><li>Prophet</li><li>Plotly</li><li>ManyChat</li><li>AppSheet</li>
+        </ul>
+      </div>
+
       <dl class="habilidades">
-        <div>
-          <dt data-en="AI and automation">IA y automatización</dt>
-          <dd data-en="n8n, AI agents, OpenAI API, ManyChat, multimodal systems with LLMs and vision models">n8n, agentes de IA, OpenAI API, ManyChat, sistemas multimodales con LLM y modelos de visión</dd>
+        <div data-revelar>
+          <dt data-en="AI and agents">IA y agentes</dt>
+          <dd data-en="AI agents, Google Gemini, OpenAI API, LangChain, RAG, prompt engineering, multimodal systems with LLMs and vision models">Agentes de IA, Google Gemini, OpenAI API, LangChain, RAG, prompt engineering, sistemas multimodales con LLM y modelos de visión</dd>
         </div>
-        <div>
+        <div data-revelar>
+          <dt data-en="Automation and messaging">Automatización y mensajería</dt>
+          <dd>n8n, ManyChat, WhatsApp API, AppSheet</dd>
+        </div>
+        <div data-revelar>
           <dt data-en="Machine learning">Machine learning</dt>
           <dd data-en="Python, scikit-learn, classification (SVM, Random Forest), time series (ARIMA, Prophet), NLP with TF-IDF">Python, scikit-learn, clasificación (SVM, Random Forest), series de tiempo (ARIMA, Prophet), NLP con TF-IDF</dd>
         </div>
-        <div>
-          <dt data-en="Data">Datos</dt>
-          <dd data-en="pandas, NumPy, exploratory analysis, preprocessing, ETL processes, MySQL, visualization with Matplotlib, Seaborn and Plotly">pandas, NumPy, análisis exploratorio, preprocesamiento, procesos ETL, MySQL, visualización con Matplotlib, Seaborn y Plotly</dd>
+        <div data-revelar>
+          <dt data-en="Data and visualization">Datos y visualización</dt>
+          <dd data-en="pandas, NumPy, exploratory analysis, preprocessing, ETL processes, Matplotlib, Seaborn, Plotly, Jupyter">pandas, NumPy, análisis exploratorio, preprocesamiento, procesos ETL, Matplotlib, Seaborn, Plotly, Jupyter</dd>
         </div>
-        <div>
+        <div data-revelar>
+          <dt data-en="Databases and cloud">Bases de datos y nube</dt>
+          <dd>MySQL, Google Cloud SQL, Google Cloud Storage, Supabase</dd>
+        </div>
+        <div data-revelar>
           <dt data-en="Tools and languages">Herramientas e idiomas</dt>
-          <dd data-en="Git and GitHub, Jupyter. Spanish (native), English (B2)">Git y GitHub, Jupyter. Español (nativo), inglés (B2)</dd>
+          <dd data-en="Git and GitHub. Spanish (native), English (B2)">Git y GitHub. Español (nativo), inglés (B2)</dd>
         </div>
       </dl>
     </section>
 
     <!-- Formación -->
     <section class="bloque" id="formacion">
-      <h2 data-en="Education">Formación</h2>
+      <h2 data-revelar data-en="Education">Formación</h2>
       <ol class="linea">
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="2021 – present">2021 – actual</p>
           <div>
             <h3 data-en="B.Sc. in Computer Science">Licenciatura en Ciencias de la Computación</h3>
             <p class="lugar" data-en="School of Sciences, UNAM">Facultad de Ciencias, UNAM</p>
           </div>
         </li>
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Apr – Sep 2024">Abr – Sep 2024</p>
           <div>
             <h3 data-en="Data Scientist Jr. diploma">Diplomado Data Scientist Jr.</h3>
             <p class="lugar">Tecnológico Nacional de México</p>
           </div>
         </li>
-        <li>
+        <li data-revelar>
           <p class="fecha" data-en="Nov 2023 – Mar 2024">Nov 2023 – Mar 2024</p>
           <div>
             <h3 data-en="Data Scientist Jr. course">Curso Data Scientist Jr.</h3>
@@ -243,18 +337,25 @@
 
     <!-- Contacto -->
     <section class="bloque contacto" id="contacto">
-      <h2 data-en="Let's talk">Hablemos</h2>
-      <p class="entrada" data-en="If you have a project with data, automation or AI agents, write to me.">Si tienes un proyecto de datos, automatización o agentes de IA, escríbeme.</p>
-      <ul class="contacto-lista">
-        <li><span data-en="Email">Correo</span><a href="mailto:annacuga12@gmail.com">annacuga12@gmail.com</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/anna-cuevas12/" target="_blank" rel="noopener">linkedin.com/in/anna-cuevas12</a></li>
-        <li><span>GitHub</span><a href="https://github.com/AnnaCUGA" target="_blank" rel="noopener">github.com/AnnaCUGA</a></li>
-      </ul>
+      <div class="contacto-caja" data-revelar>
+        <h2 data-en="Let's talk">Hablemos</h2>
+        <p class="entrada" data-en="If you have a project with data, automation or AI agents, write to me.">Si tienes un proyecto de datos, automatización o agentes de IA, escríbeme.</p>
+        <div class="correo">
+          <a href="mailto:annacuga12@gmail.com" id="correo">annacuga12@gmail.com</a>
+          <button type="button" class="boton" id="copiar" data-en="Copy email">Copiar correo</button>
+        </div>
+        <p class="copiado" id="copiado" role="status" aria-live="polite"></p>
+        <div class="acciones">
+          <a class="boton boton-lleno" href="https://www.linkedin.com/in/anna-cuevas12/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="boton" href="https://github.com/AnnaCUGA" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="pie">
     <p>&copy; <span id="anio">2026</span> Ana Cristina Cuevas García</p>
+    <a href="#inicio" data-en="Back to top">Volver arriba</a>
   </footer>
 
   <script src="main.js"></script>
