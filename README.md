@@ -12,7 +12,7 @@
 
 ## What I do
 
-I'm a **Data and Artificial Intelligence Analyst at Fundación Televisa** and a Computer Science student at UNAM's School of Sciences. My work sits where language models meet real operations: agents that hold a conversation, look at a photo, check it against rules, and write the result to a database.
+I'm a **Data and Artificial Intelligence Analyst at Fundación Televisa**. My work sits where language models meet real operations: agents that hold a conversation, look at a photo, check it against rules, and write the result to a database.
 
 <table>
   <tr>
