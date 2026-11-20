@@ -122,7 +122,7 @@ I'm a **Data and Artificial Intelligence Analyst at Fundación Televisa**. My wo
 
 - 🎓 **B.Sc. in Computer Science**, School of Sciences, UNAM.
 - 📜 **Data Scientist Jr. diploma**, Tecnológico Nacional de México (2024)
-- 📜 **Data Scientist Jr. course**, BEDU and Tecnolochicas (2023 – 2024)
+- 📜 **Data Scientist Jr. course**, Lottus (BEDU before) and Tecnolochicas (2023 – 2024)
 - 🌎 Spanish (native) and English (B2)
 
 <a href="mailto:annacuga12@gmail.com">
